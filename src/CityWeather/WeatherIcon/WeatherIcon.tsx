@@ -1,3 +1,4 @@
+import { useCityWeatherContext } from "../CityWeather.context";
 import Cloudy from "./Icons/Cloudy";
 import CloudyDayRain from "./Icons/CloudyDayRain";
 import CloudyNightRain from "./Icons/CloudyNightRain";
@@ -11,8 +12,10 @@ import OvercastRain from "./Icons/OvercastRain";
 import Snow from "./Icons/Snow";
 import Thunderstorms from "./Icons/Thunderstorms";
 
-export const WeatherIcon = ({ iconType }: { iconType: string }) => {
-  switch (iconType) {
+const WeatherIcon = () => {
+  const { cityWeather } = useCityWeatherContext();
+
+  switch (cityWeather.weather[0].icon) {
     case "01d":
       return <Day />;
     case "01n":
@@ -47,3 +50,5 @@ export const WeatherIcon = ({ iconType }: { iconType: string }) => {
       break;
   }
 };
+
+export default WeatherIcon;

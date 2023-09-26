@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface IWeather {
   id: number;
   main: string;
@@ -27,4 +29,5 @@ export interface IWeatherData {
 
 export interface ICityWeather {
   cityWeather: IWeatherData;
+  children: ReactNode;
 }
