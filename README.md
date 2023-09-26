@@ -2,12 +2,17 @@
 
 ## Demo
 
-In the project directory, you can run:
+https://imoital.github.io/weather-app/
 
 ## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This React web application allows users to easily retrieve current weather information for any city around the world.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## How to use
+
+1. Clone this repository to your local machine.
+2. Run `yarn install` to install the necessary dependencies.
+3. Create an account on (OpenWeatherMap)[https://openweathermap.org/] and obtain an API key.
+4. Create a .env file in the root directory and add your API key as follows: `REACT_APP_API_KEY=YOUR_API_KEY_HERE`
+5. Run npm start to start the development server.
+   Open your browser and navigate to http://localhost:3000.
