@@ -14,41 +14,57 @@ import Thunderstorms from "./Icons/Thunderstorms";
 
 const WeatherIcon = () => {
   const { cityWeather } = useCityWeatherContext();
+  const id = "icon";
+  let icon = <Mist />;
 
   switch (cityWeather.weather[0].icon) {
     case "01d":
-      return <Day />;
+      icon = <Day />;
+      break;
     case "01n":
-      return <Night />;
+      icon = <Night />;
+      break;
     case "02d":
-      return <FewCloudsDay />;
+      icon = <FewCloudsDay />;
+      break;
     case "02n":
-      return <FewCloudsNight />;
+      icon = <FewCloudsNight />;
+      break;
     case "03d":
     case "03n":
-      return <Cloudy />;
+      icon = <Cloudy />;
+      break;
     case "04d":
     case "04n":
-      return <Overcast />;
+      icon = <Overcast />;
+      break;
     case "09d":
     case "09n":
-      return <OvercastRain />;
+      icon = <OvercastRain />;
+      break;
     case "10d":
-      return <CloudyDayRain />;
+      icon = <CloudyDayRain />;
+      break;
     case "10n":
-      return <CloudyNightRain />;
+      icon = <CloudyNightRain />;
+      break;
     case "11d":
     case "11n":
-      return <Thunderstorms />;
+      icon = <Thunderstorms />;
+      break;
     case "13d":
     case "13n":
-      return <Snow />;
+      icon = <Snow />;
+      break;
     case "50d":
     case "50n":
-      return <Mist />;
+      icon = <Mist />;
+      break;
     default:
       break;
   }
+
+  return <div data-testid="icon">{icon}</div>;
 };
 
 export default WeatherIcon;
